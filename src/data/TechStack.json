@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Front End Web Developer",
+    "description": "A user interface is like a joke. If you have to explain it, it’s not that good.",
+    "tech": [
+      "/images/logo/html.png",
+      "/images/logo/css.png",
+      "/images/logo/js.png",
+      "/images/logo/sass.png",
+      "/images/logo/bootstrap.png",
+      "/images/logo/tailwind.png",
+      "/images/logo/daisyui.png",
+      "/images/logo/react.png",
+      "/images/logo/git.png",
+      "/images/logo/github.png",
+      "/images/logo/firebase.png",
+      "/images/logo/figma.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "3D Artist",
+    "description": "The best way to improve is to keep creating.",
+    "tech": [
+      "/images/logo/blender.png",
+      "/images/logo/davinci.png",
+      "/images/logo/photoshop.png",
+      "/images/logo/krita.png"
+    ]
+  }
+]
