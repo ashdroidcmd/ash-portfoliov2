@@ -45,26 +45,28 @@ const ProjectCards = () => {
                                     />
                                 ))}
                             </div>
-                            <div className="flex space-x-4 mb-4">
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-400 hover:underline"
-                                >
-                                    <Button title="Repo" />
-                                </a>
-                                {project.demo && (
-                                    <a
-                                        href={project.demo}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-400 hover:underline"
-                                    >
-                                        <Button title="Live" />
-                                    </a>
-                                )}
-                            </div>
+                                <div className="flex space-x-4 mb-4">
+                                    {project.github && (
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-400 hover:underline"
+                                        >
+                                            <Button title="Repo" />
+                                        </a>
+                                    )}
+                                    {project.demo && (
+                                        <a
+                                            href={project.demo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-400 hover:underline"
+                                        >
+                                            <Button title="Live" />
+                                        </a>
+                                    )}
+                                </div>
                         </div>
 
                         {/* Project Image */}
