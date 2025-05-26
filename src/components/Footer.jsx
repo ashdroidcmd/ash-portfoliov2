@@ -38,7 +38,7 @@ const Footer = () => {
                 </ul>
 
                 <aside>
-                    <p>Copyright © {new Date().getFullYear()} - Ashlee Zoe Gesite, All Rights Reserved</p>
+                    <p className="text-white text-center">Copyright © {new Date().getFullYear()} - Ashlee Zoe Gesite, All Rights Reserved</p>
                 </aside>
             </footer>
         </>
