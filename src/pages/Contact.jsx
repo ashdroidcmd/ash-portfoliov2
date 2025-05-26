@@ -46,9 +46,14 @@ const Contact = () => {
 
               {/* Contact Button */}
               <div className="w-full md:w-1/2 flex justify-center">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=ashgesite25@gmail.com&su=Hello%20Ash&body=I%20visited%20your%20portfolio!"
+                  target="_blank"
+                  rel="noopener noreferrer">
                 <button className="custom-hover btn py-4 px-6 sm:py-6 sm:px-8 md:py-8 md:px-10 rounded-2xl text-2xl sm:text-3xl border border-blue-700 hover:bg-black transition duration-700 ease-in-out hover:scale-105">
                   Contact Me
                 </button>
+                </a>
               </div>
             </div>
           </div>
