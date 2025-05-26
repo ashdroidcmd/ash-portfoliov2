@@ -9,13 +9,13 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex-shrink-0 w-47">
-            <a href="#">
+            <Link to="home-section" smooth={true}>
               <img
                 src="/logo.png"
                 alt="Logo"
                 className="w-20 p-2 transition-transform duration-500 ease-in-out hover:scale-125"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Nav Links */}

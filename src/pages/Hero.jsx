@@ -1,5 +1,7 @@
 import React from 'react'
 import Button from '../components/Button'
+import { Link } from 'react-scroll'
+
 const Hero = () => {
   return (
     <>
@@ -27,9 +29,9 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-2 justify-center text-2xl">
-            <a href="#project-section" className="animate__animated animate__bounceInLeft animate__slower animate__delay-2s">
+            <Link to="project-section" smooth={true} className="animate__animated animate__bounceInLeft animate__slower animate__delay-2s">
               <Button title="Web Projects" />
-            </a>
+            </Link>
             <a href="https://www.instagram.com/kuroi_3d/" target="_blank" rel="noopener noreferrer" className="animate__animated animate__bounceInUp animate__slower animate__delay-2s">
               <Button title="3D Projects" />
             </a>
