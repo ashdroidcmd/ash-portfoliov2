@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Blinking an LED",
+    "slug": "https://ash-blogsite.vercel.app/projects/led-blink",
+    "date": "April 14, 2025",
+    "description": "Turning on an LED with an Arduino is one of the simplest beginner projects.",
+    "images": "/images/blogsite/1blinkled.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Button-Controlled LED",
+    "slug": "https://ash-blogsite.vercel.app/projects/button-led",
+    "date": "April 21, 2025",
+    "description": "Use a button to control an LED — a fundamental digital input/output Arduino project.",
+    "images": "/images/blogsite/2button.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Potentiometer LED Dimmer",
+    "slug": "https://ash-blogsite.vercel.app/projects/potentiometer-led-dimmer",
+    "date": "April 28, 2025",
+    "description": "Control LED brightness with a potentiometer using analog input and PWM output.",
+    "images": "/images/blogsite/3dimmer.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Traffic Light System",
+    "slug": "https://ash-blogsite.vercel.app/projects/traffic-light-system",
+    "date": "May 5, 2025",
+    "description": "Simulate a traffic light with red, yellow, and green LEDs using timed sequences.",
+    "images": "/images/blogsite/4trafficlight.jpg"
+  },
+  {
+    "id": 5,
+    "title": "LDR Light Sensor LED Control",
+    "slug": "https://ash-blogsite.vercel.app/projects/ldr-light-sensor",
+    "date": "May 12, 2025",
+    "description": "Automatically control an LED based on ambient light using an LDR sensor.",
+    "images": "/images/blogsite/5ldr.png"
+  },
+  {
+    "id": 6,
+    "title": "Ultrasonic Distance Sensor",
+    "slug": "https://ash-blogsite.vercel.app/projects/ultrasonic-distance-sensor",
+    "date": "May 19, 2025",
+    "description": "Use an ultrasonic sensor to detect object distance and control an LED.",
+    "images": "/images/blogsite/6ultrasonic.png"
+  }
+]

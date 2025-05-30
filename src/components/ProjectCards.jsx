@@ -1,5 +1,7 @@
 import projects from '../data/WebProjects.json'
 import Button from './Button'
+import { useAOS } from '../hooks/useAOS';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,26 +12,20 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 const ProjectCards = () => {
-
-    useEffect(() => {
-        AOS.init({
-            duration: 1000, // animation duration
-            once: true, // only animate once
-        });
-    }, []);
+    // Hook
+    useAOS();
 
     return (
         <>
-            <div  className="space-y-10 mb-10">
+            <div  className="space-y-10 mb-10 ">
+                
+                {/* Animation */}
                 {projects.map(project => (
                     <div data-aos="flip-up" data-aos-once="true" key={project.id}>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-6 items-center bg-slate-950 rounded-lg border border-blue-600 custom-hover">
+                        
                         {/* Text Content */}
                         <div>
                             <h3 className="text-2xl font-semibold text-blue-600 mb-2">{project.title}</h3>

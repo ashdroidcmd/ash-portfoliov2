@@ -5,8 +5,8 @@
     "description": "My developer portfolio showcasing my projects and skills. Built with React, Tailwind CSS and DaisyUI.",
     "images": [
       "/images/portfolio/1.png",
-      "/images/portfolio/2.png",
       "/images/portfolio/3.png",
+      "/images/portfolio/2.png",
       "/images/portfolio/4.png"
     ],
     "tech": [
@@ -20,6 +20,25 @@
   },
   {
     "id": 2,
+    "title": "My Blog Website",
+    "description": "My simple blog where I post breakdowns of my 3D art projects and Arduino builds. Powered by React + Wordpress",
+    "images": [
+      "/images/ash-blogsite/1.png",
+      "/images/ash-blogsite/2.png",
+      "/images/ash-blogsite/3.png",
+      "/images/ash-blogsite/4.png"
+    ],
+    "tech": [
+      "/images/logo/html.png",
+      "/images/logo/tailwind.png",
+      "/images/logo/daisyui.png",
+      "/images/logo/react.png"
+    ],
+    "github": "https://github.com/ashdroidcmd/ash-blogsite",
+    "demo": "https://ash-blogsite.vercel.app/projects/ultrasonic-distance-sensor"
+  },
+  {
+    "id": 3,
     "title": "Secret Shop",
     "description": "A full-featured e-commerce storefront with product catalog, shopping cart, and secure Firebase-powered checkout.",
     "images": [
@@ -40,10 +59,14 @@
     "demo": "https://ashdroidcmd.github.io/side-shop-ecommerce/"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "DevPortal",
     "description": "DevPortal Library is your all-in-one resource Portal built for developers, tech learners, and digital creators.",
-    "images": ["/images/devportal/1.png", "/images/devportal/2.png", "/images/devportal/3.png"],
+    "images": [
+      "/images/devportal/1.png",
+      "/images/devportal/2.png",
+      "/images/devportal/3.png"
+    ],
     "tech": [
       "/images/logo/html.png",
       "/images/logo/tailwind.png",
@@ -53,31 +76,9 @@
     "demo": "https://devportal-phi.vercel.app/"
   },
   {
-    "id": 4,
-    "title": "Droid",
-    "description": "Droid is a tech blog platform with arduino tutorials.",
-    "images": [
-      "/images/droid/1.png",
-      "/images/droid/2.png",
-      "/images/droid/3.png",
-      "/images/droid/4.png",
-      "/images/droid/5.png",
-      "/images/droid/6.png",
-      "/images/droid/7.png",
-      "/images/droid/8.png"
-    ],
-    "tech": [
-      "/images/logo/html.png",
-      "/images/logo/bootstrap.png",
-      "/images/logo/react.png"
-    ],
-    "github": "https://github.com/ashdroidcmd/Droid-Tech-Blog",
-    "demo": "https://droid-tech-blog.vercel.app/"
-  },
-  {
     "id": 5,
     "title": "Auto-Tek Landing Page",
-    "description": "A sleek, responsive business landing page for an automotive repair shop, with rich animations and clear call-to-action.",
+    "description": "A sleek, responsive business landing page for an automotive repair shop with a clear call-to-action.",
     "images": [
       "/images/autotek/1.png",
       "/images/autotek/2.png",

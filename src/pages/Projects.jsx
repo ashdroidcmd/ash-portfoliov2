@@ -1,18 +1,9 @@
 import ProjectCards from "../components/ProjectCards"
-
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-
+import { useAOS } from '../hooks/useAOS';
 
 const Projects = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000, // animation duration
-      once: true, // only animate once
-    });
-  }, []);
+  // Hook
+  useAOS();
   
   return (
     <>

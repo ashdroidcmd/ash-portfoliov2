@@ -1,14 +1,8 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useAOS } from '../hooks/useAOS';
 
 const Footer = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 1000, // animation duration
-            once: true, // only animate once
-        });
-    }, []);
+    // Hook
+    useAOS();
 
     return (
         <>

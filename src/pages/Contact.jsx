@@ -1,16 +1,10 @@
 import Footer from "../components/Footer"
-
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useAOS } from '../hooks/useAOS';
 
 const Contact = () => {
-  useEffect(() => {
-          AOS.init({
-              duration: 1000, // animation duration
-              once: true, // only animate once
-          });
-      }, []);
+  // Hook
+  useAOS();
+  
   return (
     <>
       <section id="contact-section" className="bg-black border-t border-blue-800 px-4 font-[Raleway] min-h-screen flex flex-col">

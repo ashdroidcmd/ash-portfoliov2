@@ -57,6 +57,18 @@ const Navbar = () => {
             </Link>
 
             <Link
+              to="blog-section"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-90}
+              activeClass="active-link"
+              className="cursor-pointer text-white text-3xl hover:bg-blue-700 px-3 py-1 rounded-3xl transition hover:scale-105 custom-hover duration-100 ease-in-out"
+            >
+              Blog
+            </Link>
+
+            <Link
               to="contact-section"
               smooth={true}
               duration={500}
@@ -143,6 +155,19 @@ const Navbar = () => {
                   Projects
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  to="blog-section"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-90}
+                >
+                  Blog
+                </Link>
+              </li>
+
               <li>
                 <Link
                   to="contact-section"

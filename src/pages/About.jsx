@@ -1,18 +1,12 @@
 import '../App.css'
 import skills from '../data/TechStack.json'
-
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useAOS } from '../hooks/useAOS';
 
 
 const About = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000, // animation duration
-      once: true, // only animate once
-    });
-  }, []);
+  // Hook
+  useAOS();
+
   return (
     <>
       <section id="about-section" className="bg-black border-y border-blue-800 flex justify-center items-center min-h-screen overflow-y-auto font-[Raleway] py-8">
