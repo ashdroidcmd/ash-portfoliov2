@@ -33,7 +33,7 @@ A modern, responsive, and animated personal portfolio website built with **React
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/ashdroidcmd/ash-portfoliov2
 cd portfolio
 
 # Install dependencies
