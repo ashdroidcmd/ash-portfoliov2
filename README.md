@@ -29,7 +29,7 @@ A modern, responsive, and animated personal portfolio website built with **React
 
 ---
 
-## 🔧 Getting Started
+## Getting Started
 
 ```bash
 # Clone the repo
