@@ -1,12 +1,46 @@
-# React + Vite
+# My Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and animated personal portfolio website built with **React**, **Tailwind CSS**, and **DaisyUI** to showcase my skills, projects, and experience as a web developer.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** – Component-based UI architecture  
+- **Tailwind CSS** – Utility-first CSS framework for custom styling  
+- **DaisyUI** – Tailwind component library for clean and fast UI elements  
+- **SwiperJS** – Image carousel/slider for showcasing projects  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- **Responsive Design** – Fully optimized for mobile, tablet, and desktop  
+- **Modern Animations** – Smooth transitions using **Framer Motion**  
+- **Custom Theming** – Dark/light modes via DaisyUI  
+- **Project Carousel** – SwiperJS-powered project gallery with touch support  
+- **Minimal & Clean UI** – Built with usability and clarity in mind  
+- **Social Links** – LinkedIn, GitHub, and Email  
+- **Downloadable Resume** – Option to download/view CV
+
+---
+
+## Live Demo
+
+[View Portfolio Website](https://ash-portfoliov2.vercel.app/)
+
+---
+
+## Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/ashdroidcmd/ash-portfoliov2
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+# Build for production
+npm run build
