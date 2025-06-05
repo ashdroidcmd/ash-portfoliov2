@@ -1,21 +1,30 @@
+import { useState } from "react";
 import blogs from "../data/BlogPosts.json";
 import Button from "./Button";
 import { useAOS } from "../hooks/useAOS";
 
 const BlogCards = () => {
-  // Hook
   useAOS();
 
-  // Sort blogs by date (latest first) and limit to 6
-  const sortedBlogs = [...blogs]
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 6);
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const blogsPerPage = 6;
+
+  // Sort blogs by date (latest first)
+  const sortedBlogs = [...blogs].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+
+  // Pagination logic
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = sortedBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
+  const totalPages = Math.ceil(sortedBlogs.length / blogsPerPage);
 
   return (
     <div className="space-y-10 mb-10 font-[Raleway]">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Animation Flip Left */}
-        {sortedBlogs.map((blogPost) => (
+        {currentBlogs.map((blogPost) => (
           <div data-aos="flip-left" data-aos-once="true" key={blogPost.id}>
             <div className="card bg-slate-950 rounded-lg border border-blue-600 custom-hover flex flex-col">
               <figure className="h-48 overflow-hidden">
@@ -28,12 +37,12 @@ const BlogCards = () => {
 
               <div className="card-body flex-1 flex flex-col justify-between">
                 <div>
-                  <h2 className="text-blue-600 text-2xl font-semibold">
+                  <h2 className="text-blue-600 text-xl font-semibold">
                     {blogPost.title}
                   </h2>
                   <p>{blogPost.date}</p>
-                  <p className="mb-4 text-lg">
-                    {blogPost.description?.slice(0, 100)}...
+                  <p className="mb-4 text-base">
+                    {blogPost.description?.slice(0, 80)}...
                   </p>
                 </div>
 
@@ -47,6 +56,23 @@ const BlogCards = () => {
               </div>
             </div>
           </div>
+        ))}
+      </div>
+
+      {/* Pagination Controls */}
+      <div className="flex justify-center gap-2 mt-6">
+        {Array.from({ length: totalPages }, (_, i) => (
+          <button
+            key={i + 1}
+            onClick={() => setCurrentPage(i + 1)}
+            className={`px-4 py-2 rounded font-semibold transition text-xl ${
+              currentPage === i + 1
+                ? "bg-blue-600 text-black "
+                : "bg-slate-950 text-gray-200 border border-blue-600 hover:bg-slate-800 custom-hover"
+            }`}
+          >
+            {i + 1}
+          </button>
         ))}
       </div>
     </div>
