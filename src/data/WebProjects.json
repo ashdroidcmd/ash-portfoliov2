@@ -94,5 +94,24 @@
     ],
     "github": "https://github.com/yourusername/auto-tek",
     "demo": "https://ashdroidcmd.github.io/auto-tek/"
+  },
+  {
+    "id": 6,
+    "title": "MeowStack",
+    "description": "Discover my portfolio of custom websites built with Next.js, React, Tailwind CSS, and WordPress. Clean, responsive, and SEO-friendly solutions tailored for businesses and creators.",
+    "images": [
+      "/images/meowstack/1.png",
+      "/images/meowstack/2.png",
+      "/images/meowstack/3.png",
+      "/images/meowstack/4.png"
+    ],
+    "tech": [
+      "/images/logo/html.png",
+      "/images/logo/tailwind.png",
+      "/images/logo/daisyui.png",
+      "/images/logo/react.png",
+      "/images/logo/next.png"
+    ],
+    "demo": "https://meowstack.vercel.app/"
   }
 ]
