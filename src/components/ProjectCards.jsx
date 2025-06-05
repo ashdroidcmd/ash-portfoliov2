@@ -1,26 +1,34 @@
+import { useState } from "react";
 import projects from "../data/WebProjects.json";
 import Button from "./Button";
 import { useAOS } from "../hooks/useAOS";
 
-// Import Swiper React components
+// Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
-// import required modules
 import { Pagination } from "swiper/modules";
 
 const ProjectCards = () => {
-  // Hook
   useAOS();
+
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 4;
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  // Sliced projects
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
 
   return (
     <>
-      <div className="space-y-10 mb-10 ">
-        {/* Animation */}
-        {projects.map((project) => (
+      <div className="space-y-10 mb-10">
+        {currentProjects.map((project) => (
           <div data-aos="flip-up" data-aos-once="true" key={project.id}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-6 items-center bg-slate-950 rounded-lg border border-blue-600 custom-hover">
               {/* Text Content */}
@@ -29,7 +37,7 @@ const ProjectCards = () => {
                   {project.title}
                 </h3>
                 <p className="text-white mb-4 text-lg">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4 ">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, index) => (
                     <img
                       key={index}
@@ -93,6 +101,23 @@ const ProjectCards = () => {
             </div>
           </div>
         ))}
+
+        {/* Pagination Buttons */}
+        <div className="flex justify-center gap-2 mt-6">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i + 1}
+              onClick={() => setCurrentPage(i + 1)}
+              className={`px-4 py-2 rounded font-semibold transition text-xl ${
+                currentPage === i + 1
+                  ? "bg-blue-600 text-black "
+                  : "bg-slate-950 text-gray-200 border border-blue-600 hover:bg-slate-800 custom-hover"
+              }`}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
       </div>
     </>
   );
