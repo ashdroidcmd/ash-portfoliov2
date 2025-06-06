@@ -36,7 +36,7 @@ const BlogCards = () => {
               </figure>
 
               <div className="card-body flex-1 flex flex-col justify-between">
-                <div>
+                <div className="space-y-3">
                   <h2 className="text-blue-600 text-xl font-semibold">
                     {blogPost.title}
                   </h2>
