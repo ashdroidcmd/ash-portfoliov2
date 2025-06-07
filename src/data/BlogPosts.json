@@ -46,5 +46,12 @@
     "date": "May 19, 2025",
     "description": "Use an ultrasonic sensor to detect object distance and control an LED.",
     "images": "/images/blogsite/6ultrasonic.png"
+  },{
+    "id": 7,
+    "title": "Temperature and Humidity Monitor",
+    "slug": "https://ash-blogsite.vercel.app/projects/temperature-humidity-monitor",
+    "date": "May 26, 2025",
+    "description": "Monitor temperature and humidity levels using a DHT11 sensor and display the readings on a 16x2 I2C LCD. This project introduces digital sensors and I2C communication.",
+    "images": "/images/blogsite/7dht11.jpg"
   }
 ]
