@@ -30,9 +30,9 @@ const ProjectCards = () => {
       <div className="space-y-10 mb-10">
         {currentProjects.map((project) => (
           <div data-aos="flip-up" data-aos-once="true" key={project.id}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-6 items-center bg-slate-950 rounded-lg border border-blue-600 custom-hover">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center bg-slate-950 rounded-lg border border-blue-600 custom-hover">
               {/* Text Content */}
-              <div>
+              <div className="p-4">
                 <h3 className="text-2xl font-semibold text-blue-600 mb-2">
                   {project.title}
                 </h3>

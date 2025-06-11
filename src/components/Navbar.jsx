@@ -10,7 +10,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 w-47">
             <Link to="home-section" smooth={true}>
               <img
-                src="/logo.png"
+                src="https://res.cloudinary.com/dmkri61cj/image/upload/w_80,f_auto,q_auto/v1749644913/logo_ujfwng.png"
                 alt="Logo"
                 className="w-20 p-2 transition-transform duration-500 ease-in-out hover:scale-125"
               />

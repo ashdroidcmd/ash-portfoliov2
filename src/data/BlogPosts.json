@@ -5,7 +5,7 @@
     "slug": "https://ash-blogsite.vercel.app/projects/led-blink",
     "date": "April 14, 2025",
     "description": "Turning on an LED with an Arduino is one of the simplest beginner projects.",
-    "images": "/images/blogsite/1blinkled.jpg"
+    "images": "https://res.cloudinary.com/dmkri61cj/image/upload/f_auto,q_auto/v1749646592/1blinkled_e5xph8.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "slug": "https://ash-blogsite.vercel.app/projects/button-led",
     "date": "April 21, 2025",
     "description": "Use a button to control an LED — a fundamental digital input/output Arduino project.",
-    "images": "/images/blogsite/2button.jpg"
+    "images": "https://res.cloudinary.com/dmkri61cj/image/upload/f_auto,q_auto/v1749646598/2button_z4ylds.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "slug": "https://ash-blogsite.vercel.app/projects/potentiometer-led-dimmer",
     "date": "April 28, 2025",
     "description": "Control LED brightness with a potentiometer using analog input and PWM output.",
-    "images": "/images/blogsite/3dimmer.jpg"
+    "images": "https://res.cloudinary.com/dmkri61cj/image/upload/f_auto,q_auto/v1749646602/3dimmer_pthm1x.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "slug": "https://ash-blogsite.vercel.app/projects/traffic-light-system",
     "date": "May 5, 2025",
     "description": "Simulate a traffic light with red, yellow, and green LEDs using timed sequences.",
-    "images": "/images/blogsite/4trafficlight.jpg"
+    "images": "https://res.cloudinary.com/dmkri61cj/image/upload/f_auto,q_auto/v1749646614/4trafficlight_zni6es.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "slug": "https://ash-blogsite.vercel.app/projects/ldr-light-sensor",
     "date": "May 12, 2025",
     "description": "Automatically control an LED based on ambient light using an LDR sensor.",
-    "images": "/images/blogsite/5ldr.png"
+    "images": "https://res.cloudinary.com/dmkri61cj/image/upload/f_auto,q_auto/v1749646572/5ldr_fhrujk.png"
   },
   {
     "id": 6,
@@ -45,13 +45,13 @@
     "slug": "https://ash-blogsite.vercel.app/projects/ultrasonic-distance-sensor",
     "date": "May 19, 2025",
     "description": "Use an ultrasonic sensor to detect object distance and control an LED.",
-    "images": "/images/blogsite/6ultrasonic.png"
+    "images": "https://res.cloudinary.com/dmkri61cj/image/upload/f_auto,q_auto/v1749646587/6ultrasonic_enlmkn.png"
   },{
     "id": 7,
     "title": "Temperature and Humidity Monitor",
     "slug": "https://ash-blogsite.vercel.app/projects/temperature-humidity-monitor",
     "date": "May 26, 2025",
     "description": "Monitor temperature and humidity levels using a DHT11 sensor and display the readings on a 16x2 I2C LCD. This project introduces digital sensors and I2C communication.",
-    "images": "/images/blogsite/7dht11.jpg"
+    "images": "https://res.cloudinary.com/dmkri61cj/image/upload/f_auto,q_auto/v1749646589/7dht11_plazoj.jpg"
   }
 ]
