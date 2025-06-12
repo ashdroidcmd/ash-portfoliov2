@@ -1,10 +1,25 @@
 import "../App.css";
-import skills from "../data/TechStack.json";
 import { useAOS } from "../hooks/useAOS";
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase"; // Adjust the path if needed
 
 const About = () => {
   // Hook
   useAOS();
+  
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    const fetchSkills = async () => {
+      const querySnapshot = await getDocs(collection(db, "tech-stack"));
+      const fetchedSkills = querySnapshot.docs.map((doc) => doc.data());
+      const sortedSkills = fetchedSkills.sort((a, b) => a.id - b.id); // Sort by ID
+      setSkills(sortedSkills);
+    };
+
+    fetchSkills();
+  }, []);
 
   return (
     <>
