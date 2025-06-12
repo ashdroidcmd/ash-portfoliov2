@@ -1,8 +1,10 @@
 import "../App.css";
 import { useAOS } from "../hooks/useAOS";
 import { useEffect, useState } from "react";
+
+// Firebase
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebase"; // Adjust the path if needed
+import { db } from "../firebase";
 
 const About = () => {
   // Hook
