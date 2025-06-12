@@ -1,16 +1,33 @@
-import { useState } from "react";
-import blogs from "../data/BlogPosts.json";
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
 import Button from "./Button";
 import { useAOS } from "../hooks/useAOS";
 
 const BlogCards = () => {
-  useAOS();
-
-  // Pagination state
+  const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
 
-  // Sort blogs by date (latest first)
+  useAOS();
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const querySnapshot = await getDocs(
+          collection(db, "arduino-blogposts")
+        );
+        const fetchedBlogs = querySnapshot.docs.map((doc) => doc.data());
+        setBlogs(fetchedBlogs);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  // Sort by date (latest first)
   const sortedBlogs = [...blogs].sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
@@ -26,35 +43,33 @@ const BlogCards = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {currentBlogs.map((blogPost) => (
           <div data-aos="flip-left" data-aos-once="true" key={blogPost.id}>
-            <div className="card bg-slate-950 rounded-lg border border-blue-600 custom-hover flex flex-col">
-              <figure className="h-48 overflow-hidden">
-                <img
-                  src={blogPost.images}
-                  alt={blogPost.title}
-                  className="object-cover w-full h-full"
-                />
-              </figure>
+            <a
+              href={blogPost.blogSlug}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="card bg-slate-950 rounded-lg border border-blue-600 custom-hover flex flex-col">
+                <figure className="h-48 overflow-hidden">
+                  <img
+                    src={blogPost.images?.[0]}
+                    alt={blogPost.title}
+                    className="object-cover w-full h-full"
+                  />
+                </figure>
 
-              <div className="card-body flex-1 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <h2 className="text-blue-600 text-xl font-semibold">
-                    {blogPost.title}
-                  </h2>
-                  <p>{blogPost.date}</p>
-                  <p className="mb-4 text-base">
-                    {blogPost.description?.slice(0, 80)}...
-                  </p>
+                <div className="card-body flex-1 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <h2 className="text-blue-600 text-xl font-semibold">
+                      {blogPost.title}
+                    </h2>
+                    <p>{blogPost.date}</p>
+                    <p className="mb-4 text-base">
+                      {blogPost.description?.slice(0, 80)}...
+                    </p>
+                  </div>
                 </div>
-
-                <a
-                  href={blogPost.slug}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button title="Read Article" />
-                </a>
               </div>
-            </div>
+            </a>
           </div>
         ))}
       </div>
