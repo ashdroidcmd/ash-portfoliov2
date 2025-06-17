@@ -52,15 +52,7 @@ const ProjectCards = () => {
                     src={tech}
                     alt="Tech Icon"
                     className="h-10 w-10 object-contain"
-                    title={
-                      tech
-                        .split("/")
-                        .pop()
-                        .replace(".png", "")
-                        .charAt(0)
-                        .toUpperCase() +
-                      tech.split("/").pop().replace(".png", "").slice(1)
-                    }
+                    loading="lazy"
                   />
                 ))}
               </div>
@@ -100,6 +92,7 @@ const ProjectCards = () => {
                       src={image}
                       alt={`${project.title} screenshot ${index + 1}`}
                       className="h-full w-full rounded-lg object-contain"
+                      loading="lazy"
                     />
                   </SwiperSlide>
                 ))}

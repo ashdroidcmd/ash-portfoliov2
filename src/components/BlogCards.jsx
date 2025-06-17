@@ -44,6 +44,7 @@ const BlogCards = () => {
                     src={blogPost.images?.[0]}
                     alt={blogPost.title}
                     className="h-full w-full object-cover"
+                    loading="lazy"
                   />
                 </figure>
 
