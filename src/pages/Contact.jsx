@@ -9,22 +9,22 @@ const Contact = () => {
     <>
       <section
         id="contact-section"
-        className="bg-black border-t border-blue-800 px-4 font-[Raleway] min-h-screen flex flex-col"
+        className="flex min-h-screen flex-col border-t border-blue-800 bg-black px-4 font-[Raleway]"
       >
-        <div className="flex-grow flex items-center justify-center py-10">
+        <div className="flex flex-grow items-center justify-center py-10">
           <div
             data-aos="zoom-in"
             data-aos-once="true"
-            className="w-full max-w-7xl mx-auto text-white text-center"
+            className="mx-auto w-full max-w-7xl text-center text-white"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl text-blue-600 mt-5 mb-8 font-semibold">
+            <h1 className="mt-5 mb-8 text-4xl font-semibold text-blue-600 sm:text-5xl md:text-6xl">
               Let&apos;s work together!
             </h1>
 
-            <div className="custom-hover border border-blue-600 bg-slate-950 flex flex-col md:flex-row gap-6 md:gap-0 rounded-3xl py-8 px-6 md:py-10 md:px-10 justify-evenly items-center">
+            <div className="custom-hover flex flex-col items-center justify-evenly gap-6 rounded-3xl border border-blue-600 bg-slate-950 px-6 py-8 md:flex-row md:gap-0 md:px-10 md:py-10">
               {/* Contact Info */}
-              <div className="text-start w-full md:w-1/2 text-base sm:text-lg md:text-xl">
-                <p className="text-blue-600 text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 md:mb-8">
+              <div className="w-full text-start text-base sm:text-lg md:w-1/2 md:text-xl">
+                <p className="mb-6 text-2xl font-semibold text-blue-600 sm:text-3xl md:mb-8 md:text-4xl">
                   My Contact Information
                 </p>
                 <div className="space-y-3">
@@ -44,13 +44,13 @@ const Contact = () => {
               </div>
 
               {/* Contact Button */}
-              <div className="w-full md:w-1/2 flex justify-center">
+              <div className="flex w-full justify-center md:w-1/2">
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=ashgesite25@gmail.com&su=Hello%20Ash&body=I%20visited%20your%20portfolio!"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="custom-hover btn py-4 px-6 sm:py-6 sm:px-8 md:py-8 md:px-10 rounded-2xl text-2xl sm:text-3xl border border-blue-700 hover:bg-black transition duration-700 ease-in-out hover:scale-105">
+                  <button className="custom-hover btn rounded-2xl border border-blue-700 px-6 py-4 text-2xl transition duration-700 ease-in-out hover:scale-105 hover:bg-black sm:px-8 sm:py-6 sm:text-3xl md:px-10 md:py-8">
                     Contact Me
                   </button>
                 </a>

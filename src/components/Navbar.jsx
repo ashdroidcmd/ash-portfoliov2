@@ -4,10 +4,10 @@ import "../App.css";
 const Navbar = () => {
   return (
     <>
-      <nav className="fixed top-0 w-full bg-slate-950 z-50 border-b border-blue-800 shadow animate__animated animate__fadeInDown animate__slow">
-        <div className="flex items-center justify-between px-4 h-26 font-[Raleway]">
+      <nav className="animate__animated animate__fadeInDown animate__slow fixed top-0 z-50 w-full border-b border-blue-800 bg-slate-950 shadow">
+        <div className="flex h-26 items-center justify-between px-4 font-[Raleway]">
           {/* Logo */}
-          <div className="flex-shrink-0 w-47">
+          <div className="w-47 flex-shrink-0">
             <Link to="home-section" smooth={true}>
               <img
                 src="https://res.cloudinary.com/dmkri61cj/image/upload/w_80,f_auto,q_auto/v1749644913/logo_ujfwng.png"
@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
 
           {/* Nav Links */}
-          <div className="hidden lg:flex space-x-6">
+          <div className="hidden space-x-6 lg:flex">
             <Link
               to="home-section"
               smooth={true}
@@ -26,7 +26,7 @@ const Navbar = () => {
               spy={true}
               offset={-90}
               activeClass="active-link"
-              className="cursor-pointer text-white text-3xl hover:bg-blue-700 px-3 py-1 rounded-3xl transition hover:scale-105 custom-hover duration-100 ease-in-out"
+              className="custom-hover cursor-pointer rounded-3xl px-3 py-1 text-3xl text-white transition duration-100 ease-in-out hover:scale-105 hover:bg-blue-700"
             >
               Home
             </Link>
@@ -38,7 +38,7 @@ const Navbar = () => {
               spy={true}
               offset={-90}
               activeClass="active-link"
-              className="cursor-pointer text-white text-3xl hover:bg-blue-700 px-3 py-1 rounded-3xl transition hover:scale-105 custom-hover duration-100 ease-in-out"
+              className="custom-hover cursor-pointer rounded-3xl px-3 py-1 text-3xl text-white transition duration-100 ease-in-out hover:scale-105 hover:bg-blue-700"
             >
               About
             </Link>
@@ -50,7 +50,7 @@ const Navbar = () => {
               spy={true}
               offset={-90}
               activeClass="active-link"
-              className="cursor-pointer text-white text-3xl hover:bg-blue-700 px-3 py-1 rounded-3xl transition hover:scale-105 custom-hover duration-100 ease-in-out"
+              className="custom-hover cursor-pointer rounded-3xl px-3 py-1 text-3xl text-white transition duration-100 ease-in-out hover:scale-105 hover:bg-blue-700"
             >
               Projects
             </Link>
@@ -62,7 +62,7 @@ const Navbar = () => {
               spy={true}
               offset={-90}
               activeClass="active-link"
-              className="cursor-pointer text-white text-3xl hover:bg-blue-700 px-3 py-1 rounded-3xl transition hover:scale-105 custom-hover duration-100 ease-in-out"
+              className="custom-hover cursor-pointer rounded-3xl px-3 py-1 text-3xl text-white transition duration-100 ease-in-out hover:scale-105 hover:bg-blue-700"
             >
               Blog
             </Link>
@@ -74,22 +74,22 @@ const Navbar = () => {
               spy={true}
               offset={-90}
               activeClass="active-link"
-              className="cursor-pointer text-white text-3xl hover:bg-blue-700 px-3 py-1 rounded-3xl transition hover:scale-105 custom-hover duration-100 ease-in-out"
+              className="custom-hover cursor-pointer rounded-3xl px-3 py-1 text-3xl text-white transition duration-100 ease-in-out hover:scale-105 hover:bg-blue-700"
             >
               Contact
             </Link>
           </div>
 
           {/* Social Media Icons */}
-          <div className="hidden lg:flex space-x-4">
+          <div className="hidden space-x-4 lg:flex">
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/ash-gesite-25a28334b/"
               target="_blank"
-              className="p-2 rounded-full transition hover:scale-125"
+              className="rounded-full p-2 transition hover:scale-125"
             >
               <svg
-                className="w-10 h-10 text-white hover:text-blue-400"
+                className="h-10 w-10 text-white hover:text-blue-400"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -105,10 +105,10 @@ const Navbar = () => {
             <a
               href="https://github.com/ashdroidcmd"
               target="_blank"
-              className="p-2 rounded-full transition hover:scale-125"
+              className="rounded-full p-2 transition hover:scale-125"
             >
               <svg
-                className="w-10 h-10 text-white hover:text-blue-400"
+                className="h-10 w-10 text-white hover:text-blue-400"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -123,10 +123,10 @@ const Navbar = () => {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=ashgesite25@gmail.com&su=Hello%20Ash&body=I%20visited%20your%20portfolio!"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full transition hover:scale-125"
+              className="rounded-full p-2 transition hover:scale-125"
             >
               <svg
-                className="w-10 h-10 text-white hover:text-blue-400"
+                className="h-10 w-10 text-white hover:text-blue-400"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -139,7 +139,7 @@ const Navbar = () => {
           </div>
 
           {/* Hamburger Dropdown */}
-          <div className="lg:hidden dropdown dropdown-end">
+          <div className="dropdown dropdown-end lg:hidden">
             <label tabIndex={0} className="btn btn-ghost p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +159,7 @@ const Navbar = () => {
 
             <ul
               tabIndex={0}
-              className="dropdown-content menu text-2xl p-4 shadow bg-slate-950 rounded-box w-52 text-white space-y-2"
+              className="dropdown-content menu rounded-box w-52 space-y-2 bg-slate-950 p-4 text-2xl text-white shadow"
             >
               <li>
                 <Link
@@ -227,10 +227,10 @@ const Navbar = () => {
                 <a
                   href="https://www.linkedin.com/in/ash-gesite-25a28334b/"
                   target="_blank"
-                  className="hover:bg-blue-800 p-2 rounded-full transition hover:scale-110"
+                  className="rounded-full p-2 transition hover:scale-110 hover:bg-blue-800"
                 >
                   <svg
-                    className="w-8 h-8 text-white hover:text-blue-400"
+                    className="h-8 w-8 text-white hover:text-blue-400"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -246,10 +246,10 @@ const Navbar = () => {
                 <a
                   href="https://github.com/ashdroidcmd"
                   target="_blank"
-                  className="hover:bg-blue-800 p-2 rounded-full transition hover:scale-110"
+                  className="rounded-full p-2 transition hover:scale-110 hover:bg-blue-800"
                 >
                   <svg
-                    className="w-8 h-8 text-white hover:text-blue-400"
+                    className="h-8 w-8 text-white hover:text-blue-400"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -264,10 +264,10 @@ const Navbar = () => {
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=ashgesite25@gmail.com&su=Hello%20Ash&body=I%20visited%20your%20portfolio!"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:bg-blue-800 p-2 rounded-full transition hover:scale-110"
+                  className="rounded-full p-2 transition hover:scale-110 hover:bg-blue-800"
                 >
                   <svg
-                    className="w-8 h-8 text-white hover:text-blue-400"
+                    className="h-8 w-8 text-white hover:text-blue-400"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"

@@ -9,7 +9,7 @@ import { db } from "../firebase";
 const About = () => {
   // Hook
   useAOS();
-  
+
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
@@ -27,17 +27,17 @@ const About = () => {
     <>
       <section
         id="about-section"
-        className="bg-black border-y border-blue-800 flex justify-center items-center min-h-screen overflow-y-auto font-[Raleway] py-8"
+        className="flex min-h-screen items-center justify-center overflow-y-auto border-y border-blue-800 bg-black py-8 font-[Raleway]"
       >
-        <div className="w-7xl mx-auto mt-4 px-4">
+        <div className="mx-auto mt-4 w-7xl px-4">
           {/* Intro Card */}
           <div data-aos="fade-down" data-aos-once="true">
-            <div className="text-white rounded-2xl border border-blue-600 bg-slate-950 p-6 mb-8 custom-hover">
+            <div className="custom-hover mb-8 rounded-2xl border border-blue-600 bg-slate-950 p-6 text-white">
               <h1 className="text-3xl font-bold text-blue-600">
                 I'm Ashlee Zoe Gesite
               </h1>
               <p className="block">Location: Bohol, Philippines</p>
-              <p className="text-lg m-0">
+              <p className="m-0 text-lg">
                 I'm a front-end developer and 3D environment artist crafting
                 interactive websites and immersive visuals.
               </p>
@@ -47,23 +47,23 @@ const About = () => {
           {/* Skill Cards */}
           {skills.map((skill) => (
             <div key={skill.id} data-aos="flip-up" data-aos-once="true">
-              <div className="bg-dark text-white rounded-2xl border border-blue-600 bg-slate-950 p-4 mb-8 custom-hover">
-                <h5 className="text-2xl font-bold text-blue-600 text-center">
+              <div className="bg-dark custom-hover mb-8 rounded-2xl border border-blue-600 bg-slate-950 p-4 text-white">
+                <h5 className="text-center text-2xl font-bold text-blue-600">
                   {skill.title}
                 </h5>
-                <p className="text-lg text-center">"{skill.description}"</p>
+                <p className="text-center text-lg">"{skill.description}"</p>
 
-                <div className="flex flex-wrap justify-center gap-4 items-center mt-4">
+                <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
                   {skill.tech.map((imgPath, index) => (
                     <div
                       key={index}
-                      className="w-16 transition-transform duration-400 hover:scale-125 object-contain"
+                      className="w-16 object-contain transition-transform duration-400 hover:scale-125"
                     >
                       <figure>
                         <img
                           src={imgPath}
                           alt="tech-icon"
-                          className="w-full h-auto"
+                          className="h-auto w-full"
                         />
                       </figure>
                     </div>

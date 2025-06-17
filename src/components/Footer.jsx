@@ -9,7 +9,7 @@ const Footer = () => {
       <footer
         data-aos="fade-up"
         data-aos-once="true"
-        className="footer-center flex flex-col justify-between items-center text-lg p-4 pb-10"
+        className="footer-center flex flex-col items-center justify-between p-4 pb-10 text-lg"
       >
         {/* Social Media Icons */}
         <ul className="flex flex-row">
@@ -22,7 +22,7 @@ const Footer = () => {
               title="Linkedin"
             >
               <svg
-                className="text-white w-8 h-8 duration-500 ease-in-out transition hover:scale-150"
+                className="h-8 w-8 text-white transition duration-500 ease-in-out hover:scale-150"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -50,7 +50,7 @@ const Footer = () => {
               title="Github"
             >
               <svg
-                className="text-white w-8 h-8 duration-500 ease-in-out transition hover:scale-150"
+                className="h-8 w-8 text-white transition duration-500 ease-in-out hover:scale-150"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -77,7 +77,7 @@ const Footer = () => {
               title="Gmail"
             >
               <svg
-                className="text-white w-8 h-8 duration-500 ease-in-out transition hover:scale-150"
+                className="h-8 w-8 text-white transition duration-500 ease-in-out hover:scale-150"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -98,7 +98,7 @@ const Footer = () => {
         </ul>
 
         <aside>
-          <p className="text-white text-center">
+          <p className="text-center text-white">
             Copyright © {new Date().getFullYear()} - Ashlee Zoe Gesite, All
             Rights Reserved
           </p>

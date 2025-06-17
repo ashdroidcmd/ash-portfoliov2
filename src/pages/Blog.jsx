@@ -9,13 +9,13 @@ const Blog = () => {
     <>
       <section
         id="blog-section"
-        className="bg-black flex justify-center items-center min-h-screen  border-t border-blue-800 overflow-y-auto font-[Raleway] py-8"
+        className="flex min-h-screen items-center justify-center overflow-y-auto border-t border-blue-800 bg-black py-8 font-[Raleway]"
       >
-        <div className="w-7xl mx-auto mt-4 px-4">
+        <div className="mx-auto mt-4 w-7xl px-4">
           <p
             data-aos="fade-down"
             data-aos-once="true"
-            className="text-5xl text-center text-blue-600 mb-6 font-semibold animate__animated animate__bounce"
+            className="animate__animated animate__bounce mb-6 text-center text-5xl font-semibold text-blue-600"
           >
             Blog
           </p>

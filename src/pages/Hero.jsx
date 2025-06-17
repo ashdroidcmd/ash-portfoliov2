@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <section
         id="home-section"
-        className="relative z-10 overflow-hidden h-screen bg-black flex flex-col justify-center items-center p-4 font-[Raleway]"
+        className="relative z-10 flex h-screen flex-col items-center justify-center overflow-hidden bg-black p-4 font-[Raleway]"
       >
         {/* Floating Shapes Animation */}
         <div className="wrapper">
@@ -23,16 +23,16 @@ const Hero = () => {
           <span></span>
         </div>
 
-        <div className="text-center animate__animated animate__fadeInUp animate__slower">
-          <p className="text-zinc-200 text-center">
+        <div className="animate__animated animate__fadeInUp animate__slower text-center">
+          <p className="text-center text-zinc-200">
             Front End Web Dev | 3D Artist
           </p>
           <h1 className="text-5xl font-bold text-blue-600">I&apos;m Ash</h1>
-          <p className="text-white text-2xl mb-4 font-light">
+          <p className="mb-4 text-2xl font-light text-white">
             Blending code and creativity to bring ideas to life.
           </p>
 
-          <div className="flex flex-wrap gap-2 justify-center text-2xl">
+          <div className="flex flex-wrap justify-center gap-2 text-2xl">
             <Link
               to="project-section"
               smooth={true}
