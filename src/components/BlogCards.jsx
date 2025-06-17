@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAOS } from "../hooks/useAOS";
 import useFirebaseCollection from "../hooks/useFirebaseCollection";
+import Pagination from "./Pagination";
 
 const BlogCards = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -65,19 +66,11 @@ const BlogCards = () => {
 
       {/* Pagination Controls */}
       <div className="mt-6 flex justify-center gap-2">
-        {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i + 1}
-            onClick={() => setCurrentPage(i + 1)}
-            className={`rounded px-4 py-2 text-xl font-semibold transition ${
-              currentPage === i + 1
-                ? "bg-blue-600 text-black"
-                : "custom-hover border border-blue-600 bg-slate-950 text-gray-200 hover:bg-slate-800"
-            }`}
-          >
-            {i + 1}
-          </button>
-        ))}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
       </div>
     </div>
   );

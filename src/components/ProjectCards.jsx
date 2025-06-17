@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
+import PaginationComponent from "./Pagination";
 
 // Custom Hooks
 import { useAOS } from "../hooks/useAOS";
@@ -22,6 +23,7 @@ const ProjectCards = () => {
     (a, b) => a.id - b.id,
   );
 
+  // Pagination Variables
   const totalPages = Math.ceil(projects.length / projectsPerPage);
   const indexOfLast = currentPage * projectsPerPage;
   const indexOfFirst = indexOfLast - projectsPerPage;
@@ -109,19 +111,11 @@ const ProjectCards = () => {
 
       {/* Pagination */}
       <div className="mt-6 flex justify-center gap-2">
-        {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i + 1}
-            onClick={() => setCurrentPage(i + 1)}
-            className={`rounded px-4 py-2 text-xl font-semibold transition ${
-              currentPage === i + 1
-                ? "bg-blue-600 text-black"
-                : "custom-hover border border-blue-600 bg-slate-950 text-gray-200 hover:bg-slate-800"
-            }`}
-          >
-            {i + 1}
-          </button>
-        ))}
+        <PaginationComponent
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
       </div>
     </div>
   );
